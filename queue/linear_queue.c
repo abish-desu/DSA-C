@@ -1,25 +1,59 @@
+// program implementation for linear queue operations
+
 #include <stdio.h>
-void enQueue(int value){
-    if (){
+// defining queue with size 5 and default values for rear and front values
+int queue[5], rear = -1, front = -1, size_of_q = 5;
 
-    }
-        else{
-            if(front == -1){
-            front = 0;
-            rear++;}
-        }
+void enQueue(int data)
+{
+    rear == size_of_q - 1
+        ? printf("Queue is full !!!\n")
+        : (front == -1
+               ? (front = 0)
+               : 0,
+           queue[++rear] = data,
+           printf("Inserted %d\n", data));
 }
+
 void deQueue(){
-    if (front==-1){
-        printf("queue is empty\n");
+    front == -1
+        ? printf("Queue is empty !!!\n")
+        : printf("Dequeued %d\n",queue[front]),front++,
+        (front>rear) ? front=rear=-1 : 0;
+}
+void display() {
+    if (rear == -1) {
+        printf("Queue is empty !!!\n");
+    } else {
+        printf("Queue elements:\n");
+        for (int i = front; i <= rear; i++) {
+            printf("%d\n", queue[i]);
+        }
     }
-    else{
-        printf("Deleted : %d",items[front]);
-    }
-    
 }
 
-int main(){
-    int front,rear;
+int main()
+{
+      //deQueue is not possible on empty queue
+  deQueue();
 
+  //enQueue 5 elements
+  enQueue(1);
+  enQueue(2);
+  enQueue(3);
+  enQueue(4);
+  enQueue(5);
+
+  // 6th element can't be added to because the queue is full
+  enQueue(6);
+
+  display();
+
+  //deQueue removes element entered first i.e. 1
+  deQueue();
+
+  //Now we have just 4 elements
+  display();
+
+  return 0;
 }

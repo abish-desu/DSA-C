@@ -34,22 +34,23 @@ void display() {
 
 int main()
 {
-      //deQueue is not possible on empty queue
+  //deQueue is not possible on empty queue
   deQueue();
 
   //enQueue 5 elements
-  enQueue(1);
-  enQueue(2);
-  enQueue(3);
-  enQueue(4);
-  enQueue(5);
+  enQueue(71);
+  enQueue(72);
+  enQueue(73);
+  enQueue(74);
+  enQueue(75);
 
   // 6th element can't be added to because the queue is full
-  enQueue(6);
+  enQueue(76);
 
   display();
 
-  //deQueue removes element entered first i.e. 1
+  //deQueue ||  removes element entered first i.e. 71
+  deQueue();
   deQueue();
 
   //Now we have just 4 elements

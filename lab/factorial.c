@@ -16,10 +16,10 @@ int main() {
     int fact;
 
     printf("Enter a positive integer: ");
-    scanf("%u", &num);
+    scanf("%d", &num);
 
     fact = factorial(num);
-    printf("Factorial of %u = %llu\n", num, fact);
+    printf("Factorial of %d = %d\n", num, fact);
 
     return 0;
 }
